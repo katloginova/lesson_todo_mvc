@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer>
+    </script>
+    <script src="/config.js" defer></script>
+    <script src="/model/TodosCollection.js" defer></script>
+    <script src="/controller/TodosController.js" defer></script>
+    <script src="/view/TodosView.js" defer></script>
+
+
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="todolist__title title"> My To-Do List</div>
+
+        <div id="todoList" class="todolist">
+
+            <form id="todoForm" class="todolist__adder adder">
+                <input id="todoInput" type="text" placeholder="Add New Todo" class="adder__todo">
+                <input id="btnAdd" type="submit"  class="adder__btn btn" value="add todo">
+            </form>
+        </div>
+    </div>
+
+    <script id="todoTemplate" type="text/template">
+        <li class="list__item {{classDone}}" data-todo-id="{{id}}">
+            {{title}}
+            <span class="delete-btn">X</span>
+        </li>
+    </script>
+</body>
+
+</html>
